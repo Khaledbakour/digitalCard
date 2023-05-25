@@ -1,0 +1,35 @@
+@use "../../App/variables.scss" as *;
+.button-box {
+  color: $Secondary_Color;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 0 7px $email_Btn_Box_Shadow_Color;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.5s;
+  .button {
+    border: none;
+    background-color: transparent;
+    color: $Secondary_Color;
+    margin-left: 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  &:hover {
+    transform: scale(1.1);
+    background-color: $email_Btn_Hover_Bg_Color;
+    box-shadow: none;
+    .button {
+      letter-spacing: 1px;
+    }
+  }
+}
+.linkedin {
+  box-shadow: 0 0 7px $linkedin_Btn_Box_Shadow_Color;
+  &:hover {
+    background-color: $linkedin_Btn_Hover_Bg_Color;
+  }
+}

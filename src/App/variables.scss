@@ -1,0 +1,54 @@
+$primary_Color: #000;
+$Secondary_Color: #fff;
+$Bg_Color: rgb(15, 15, 15);
+
+/** Info**/
+$info_Name_Color: rgb(255, 255, 255);
+$info_Job_Color: rgb(183, 183, 183);
+$info_Website_Color: rgb(151, 151, 151);
+
+$email_Btn_Box_Shadow_Color: red;
+$email_Btn_Hover_Bg_Color: rgb(167, 0, 0);
+
+$linkedin_Btn_Box_Shadow_Color: #0c9be9;
+$linkedin_Btn_Hover_Bg_Color: #0077b5;
+
+/** section **/
+$section_Bg_Color: rgb(52, 52, 52);
+$section_Title_Color: rgb(154, 103, 237);
+$section_Text_Color: rgb(194, 194, 194);
+
+/** icons **/
+$icon_Box_Bg_Colors: rgb(49, 49, 49);
+
+// icons Object
+$social_media_Icons: (
+  "instagram": (
+    linear-gradient(
+      180deg,
+      #405de6,
+      #5b51d8,
+      #833ab4,
+      #c13584,
+      #e1306c,
+      #fd1d1d,
+      #f56040,
+      #f77737,
+      #fcaf45,
+      #ffdc80
+    ),
+    orange,
+  ),
+  "facebook": (
+    #4267b2,
+    #4267b2,
+  ),
+  "twitter": (
+    #1da1f2,
+    #1da1f2,
+  ),
+  "github": (
+    #000,
+    $Secondary_Color,
+  ),
+);

@@ -1,0 +1,35 @@
+@use "../../App/variables.scss" as *;
+.section {
+  background-color: $section_Bg_Color;
+  padding: 10px;
+
+  box-shadow: 0 0 1px $Secondary_Color;
+  width: 90%;
+  margin: 5px auto 10px;
+  animation: section_Text 1s;
+  .section-title {
+    font-size: 20px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    text-align: left;
+    color: $section_Title_Color;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+  }
+
+  .section-text {
+    text-align: justify;
+    font-size: 10px;
+    color: $section_Text_Color;
+  }
+  opacity: 1;
+  @keyframes section_Text {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}

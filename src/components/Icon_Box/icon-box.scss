@@ -1,0 +1,51 @@
+@use "../../App//variables.scss" as *;
+.icon-box {
+  text-decoration: none;
+  color: $Secondary_Color;
+  padding: 10px;
+  background-color: $icon_Box_Bg_Colors;
+  margin: 0 10px;
+  border-radius: 12px;
+  transition: all 0.5s;
+  cursor: pointer;
+  position: relative;
+
+  overflow: hidden;
+  &:hover {
+    transform: scale(1.2);
+    margin: 0 15px;
+    box-shadow: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding: 100%;
+  }
+  .icon {
+    font-size: 20px;
+  }
+}
+@each $icon_name, $colors in $social_media_Icons {
+  $counter: 0;
+  $bg_Color: "";
+  $box_Shadow_Color: "";
+  @each $colors in $colors {
+    @if $counter < 1 {
+      $bg_Color: $colors;
+    } @else {
+      $box_Shadow_Color: $colors;
+    }
+    $counter: $counter + 1;
+  }
+  .#{$icon_name} {
+    box-shadow: 0 0 7px $box_Shadow_Color;
+    &:hover {
+      &::after {
+        background: $bg_Color;
+      }
+    }
+  }
+}
